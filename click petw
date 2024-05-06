@@ -1,0 +1,27 @@
+import array as arr
+
+
+arrayName = arr.array("i", [])
+
+while True:
+    iHolder = input("please enter 10 integer values: ")
+    for i in iHolder:
+        if i.isdigit():
+            arrayName.append(int(i))
+          
+            
+    if len(arrayName) == 10:
+        print("you have succesfully entered 10 integer values", arrayName)
+        break
+        
+    if len(arrayName) < 10:
+        numba = len(arrayName)
+        print(f'you have only entered {numba} values!')
+        arrayName = arr.array("i", [])
+        continue
+        
+    if len(arrayName) > 10:
+        print("you have exceeded array size", arrayName)
+        arrayName = arr.array("i", [])
+        continue
+
